@@ -67,27 +67,31 @@ main,
   text-decoration: none;
 }
 
-.brand-text {
-  display: grid;
-  line-height: 1.05;
-}
-
-.brand-text-full strong {
-  font-size: clamp(1rem, 1.7vw, 1.35rem);
-}
-
-.brand-text-full span {
-  margin-top: 0.18rem;
-}
-
-.brand-text strong {
+.brand-nameplate {
+  display: inline-flex;
+  align-items: center;
+  min-height: 3.25rem;
+  padding: 0.8rem 1.1rem;
+  border: 1px solid rgba(15, 141, 168, 0.16);
+  border-radius: 1rem;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(228, 241, 247, 0.86));
+  box-shadow: 0 14px 26px rgba(23, 62, 83, 0.08);
   font-family: "Space Grotesk", sans-serif;
-  font-size: 1rem;
+  font-size: clamp(1rem, 1.7vw, 1.28rem);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: var(--text);
+  position: relative;
 }
 
-.brand-text span {
-  color: var(--muted);
-  font-size: 0.92rem;
+.brand-nameplate::before {
+  content: "";
+  width: 0.5rem;
+  height: 1.9rem;
+  margin-right: 0.8rem;
+  border-radius: 999px;
+  background: linear-gradient(180deg, var(--accent), var(--accent-cool));
 }
 
 .nav-links {
