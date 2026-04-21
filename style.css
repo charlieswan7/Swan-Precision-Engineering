@@ -53,31 +53,31 @@ main,
   padding: 1.25rem 0;
 }
 
+.nav-group {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.9rem;
+  flex-wrap: wrap;
+}
+
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 0.9rem;
   text-decoration: none;
-}
-
-.brand-mark {
-  display: grid;
-  place-items: center;
-  width: 3rem;
-  height: 3rem;
-  border: 1px solid rgba(15, 141, 168, 0.18);
-  border-radius: 1rem;
-  background: linear-gradient(145deg, rgba(255, 179, 71, 0.34), rgba(255, 255, 255, 0.95));
-  color: #114b5f;
-  font-family: "Space Grotesk", sans-serif;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  box-shadow: 0 14px 24px rgba(255, 138, 61, 0.15);
 }
 
 .brand-text {
   display: grid;
   line-height: 1.05;
+}
+
+.brand-text-full strong {
+  font-size: clamp(1rem, 1.7vw, 1.35rem);
+}
+
+.brand-text-full span {
+  margin-top: 0.18rem;
 }
 
 .brand-text strong {
@@ -115,6 +115,31 @@ main,
   background: rgba(255, 255, 255, 0.78);
   box-shadow: 0 10px 22px rgba(23, 62, 83, 0.08);
   transform: translateY(-1px);
+}
+
+.nav-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.nav-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.9rem;
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(135deg, #d54385, #8a3ab9);
+  box-shadow: 0 12px 24px rgba(213, 67, 133, 0.22);
+}
+
+.nav-cta-directions {
+  background: linear-gradient(135deg, var(--accent-cool), #35a9c3);
+  box-shadow: 0 12px 24px rgba(15, 141, 168, 0.18);
 }
 
 main {
@@ -373,6 +398,12 @@ li {
   gap: 1rem;
 }
 
+.cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+}
+
 .inner-page {
   padding-top: 1.25rem;
 }
@@ -400,6 +431,10 @@ li {
 .gallery-copy {
   display: grid;
   gap: 0.25rem;
+}
+
+.contact-button {
+  margin-top: 0.8rem;
 }
 
 .site-footer {
@@ -441,13 +476,22 @@ li {
     align-items: flex-start;
   }
 
+  .nav-group,
   .nav-links {
+    width: 100%;
+  }
+
+  .nav-actions {
     width: 100%;
   }
 
   .nav-links a {
     width: 100%;
     text-align: center;
+  }
+
+  .nav-cta {
+    flex: 1 1 180px;
   }
 }
 
